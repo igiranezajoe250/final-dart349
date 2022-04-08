@@ -136,8 +136,24 @@
         </section>
       </article>
     </main>
-      
-      <div class="sound-play-corner">sound logo</div>
+    
+
+
+      <div class="sound-play-corner">
+  <!-- this is the sound code-->
+
+  <div class="sound-play-corner"><div>
+    <audio id="myaudio">
+      <source src="../audio/Y2Mate.is - Yvan Buravan - TWAJE (Official Video Lyrics)-ao35sU_weNI-48k-1649335919961 48000 1.wav" type="audio/mpeg">
+    </audio>
+  
+    <button id="playPauseBTN" onclick="playPause()">sound</button>
+     
+     
+    <button onclick="stop()">No Sound </button>
+  </div>
+
+      </div>
       <div class="essay"> <P class="p-essay">MISSING INFORMATION ESSAY</P>
         <p class="essay-style"><br> <br> 
   
@@ -199,9 +215,62 @@ gallery.querySelectorAll('.gallery-item').forEach(function (item) {
 });
 
 
+var audio = document.getElementById('myaudio');
+    var playPauseBTN = document.getElementById('playPauseBTN');
+    var count = 0;
+    
+    function playPause(){
+        if(count == 0){
+            count = 1;
+            audio.play();
+            playPauseBTN.innerHTML = "Pause ⏸";
+        }else{
+            count = 0;
+            audio.pause();
+            playPauseBTN.innerHTML = "Play ►";
+        }
+    
+    }
+    
+    function stop(){
+        playPause()
+        audio.pause();
+        audio.currentTime = 0;
+        playPauseBTN.innerHTML = "Play ►";
+    }
+    document.getElementById("myaudio").loop = true;
+
+
 </script>
 
-
+<script>
+    var audio = document.getElementById('myaudio');
+    var playPauseBTN = document.getElementById('playPauseBTN');
+    var count = 0;
+    
+    function playPause(){
+        if(count == 0){
+            count = 1;
+            audio.play();
+            playPauseBTN.innerHTML = "Pause ⏸";
+        }else{
+            count = 0;
+            audio.pause();
+            playPauseBTN.innerHTML = "Play ►";
+        }
+    
+    }
+    
+    function stop(){
+        playPause()
+        audio.pause();
+        audio.currentTime = 0;
+        playPauseBTN.innerHTML = "Play ►";
+    }
+    document.getElementById("myaudio").loop = true;
+    
+    
+    </script>
 
 </body>
 </html>

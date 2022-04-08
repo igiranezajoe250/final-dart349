@@ -40,6 +40,8 @@ $screen-xsm: 370px;
     body{
         padding: 0;
         margin:  0;
+        min-height: 200vh;
+        max-height: fit-content;
         background-color: rgb(226, 236, 226);
         font-family: 'Roboto Mono', monospace;
         font-size: 1.2rem;
@@ -167,11 +169,10 @@ body {
   }
 }
 
-.page-title b{
-  display: grid;
+.page-title {
   margin-bottom: 8rem;
   font-family: 'Roboto Mono', monospace;
-  font-size: 15rem;
+  font-size: 20rem;
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: -0.3px;
@@ -183,6 +184,7 @@ body {
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%)
+  
  }
 
   @include respond($screen-md) {
@@ -244,14 +246,14 @@ body {
 
 }
 .p-essay{
-  color: #02491f;
+  color: #0b0c0b;
   font-size: 1em;
   font-family: 'Roboto Mono', monospace;
 
 }
 
 .essay-style{
-  color: #02491f;
+  color: #080808;
   font-family: 'Roboto Mono', monospace;
   font-size: 22px;
  font-weight: 3em;
